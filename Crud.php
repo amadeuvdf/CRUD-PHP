@@ -3,10 +3,10 @@ include_once 'DataBase.php';
  
 class Crud extends DbConfig
 {
-    public function __construct()
-    {
-        parent::__construct();
-    }
+    // public function __construct()
+    // {
+    //     parent::__construct();
+    // }
     
     public function getData($query)
     {        
@@ -40,7 +40,6 @@ class Crud extends DbConfig
     public function delete($id, $table) 
     { 
         $query = "DELETE FROM $table WHERE id = $id";
-        
         $result = $this->connection->query($query);
     
         if ($result == false) {

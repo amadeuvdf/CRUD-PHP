@@ -3,10 +3,10 @@ include_once("Crud.php");
  
 $crud = new Crud();
  
-//fetching data in descending order (lastest entry first)
+//query de seleção de dados em ordem mais recente
 $query = "SELECT * FROM users ORDER BY id DESC";
 $result = $crud->getData($query);
-//echo '<pre>'; print_r($result); exit;
+
 ?>
  
 <html>
@@ -15,14 +15,14 @@ $result = $crud->getData($query);
 </head>
  
 <body>
-<a href="add.html">Add New Data</a>
+<a href="add.html">Novo Registro</a>
 <br/>
 <br/>
  
     <table width='80%' border=0>
         <tr bgcolor='#CCCCCC'>
-            <td>Name</td>
-            <td>Age</td>
+            <td>Nome</td>
+            <td>Idade</td>
             <td>Email</td>
             <td>Update</td>
         </tr>

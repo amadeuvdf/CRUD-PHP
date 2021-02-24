@@ -12,7 +12,7 @@ include_once("Crud.php");
 $crud = new Crud();
 
 if(isset($_POST['Submit'])) {
-    //tras a string do dado    
+    //tras a string do dado
     $name = $crud->escape_string($_POST['name']);
     $age = $crud->escape_string($_POST['age']);
     $email = $crud->escape_string($_POST['email']);
@@ -26,6 +26,8 @@ if(isset($_POST['Submit'])) {
         
         echo "<br/><a href='index.php'>Ver o resultado</a>";
     
+} else {
+    header('Location: index.php');
 }
 ?>
 </body>

@@ -1,7 +1,6 @@
 <?php
 include_once("Crud.php");
 $crud = new Crud();
- 
 //recebe o id pela url
 $id = $crud->escape_string($_GET['id']);
 //deleta de acordo com o id na tabela

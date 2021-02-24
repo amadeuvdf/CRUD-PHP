@@ -3,13 +3,13 @@
 include_once("Crud.php");
  
 $crud = new Crud();
- 
+
 //pega id da url
 $id = $crud->escape_string($_GET['id']);
- 
+
 //seleciona os dados no metodo pelo id
 $result = $crud->getData("SELECT * FROM users WHERE id=$id");
- 
+
 foreach ($result as $res) {
     $name = $res['name'];
     $age = $res['age'];
